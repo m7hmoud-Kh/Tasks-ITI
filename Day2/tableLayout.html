@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .table{
+            display: table;
+            width: 70%;
+            margin:0 auto;
+        }
+        .header-group{
+            display: table-header-group;
+            text-align: center;
+            font-weight: bold;
+        }
+        .row-group{
+            display: table-row-group;
+        }
+        .row{
+            display: table-row;
+        }
+        .cell {
+            display: table-cell;
+            padding: 10px;
+            text-align: center;
+        }
+        .table , .row ,.cell {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        input[type="button"]{
+            color: white;
+            padding: 5px;
+        }
+        .details{
+            background-color: blue;
+        }
+        .edit{
+            background-color: green;
+        }
+        .delete {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="table">
+        <div class="header-group">
+            <span class="cell">#</span>
+            <span class="cell">firstName</span>
+            <span class="cell">LastName</span>
+            <span class="cell">salary</span>
+            <span class="cell">Positions</span>
+            <span class="cell">Age</span>
+            <span class="cell">Action</span>
+        </div>
+        <div class="row-group">
+            <div class="row">
+                <span class="cell">1</span>
+                <span class="cell">Mahmoud</span>
+                <span class="cell">Khairy</span>
+                <span class="cell">1000</span>
+                <span class="cell">team leader</span>
+                <span class="cell">21</span>
+                <span class="cell">
+                    <input type="button" value="Details" class="details">
+                    <input type="button" value="Edit" class="edit">
+                    <input type="button" value="Delete" class="delete">
+                </span>
+            </div>
+            <div class="row">
+                <span class="cell">2</span>
+                <span class="cell">Mostafa</span>
+                <span class="cell">Khairy</span>
+                <span class="cell">2000</span>
+                <span class="cell">manager</span>
+                <span class="cell">30</span>
+                <span class="cell">
+                    <input type="button" value="Details" class="details">
+                    <input type="button" value="Edit" class="edit">
+                    <input type="button" value="Delete" class="delete">
+                </span>
+            </div>
+            <div class="row">
+                <span class="cell">3</span>
+                <span class="cell">mohmmed</span>
+                <span class="cell">Khairy</span>
+                <span class="cell">1500</span>
+                <span class="cell">instructor</span>
+                <span class="cell">25</span>
+                <span class="cell">
+                    <input type="button" value="Details" class="details">
+                    <input type="button" value="Edit" class="edit">
+                    <input type="button" value="Delete" class="delete">
+                </span>
+            </div>
+            <div class="row">
+                <span class="cell">4</span>
+                <span class="cell">mai</span>
+                <span class="cell">Khairy</span>
+                <span class="cell">1500</span>
+                <span class="cell">instructor</span>
+                <span class="cell">32</span>
+                <span class="cell">
+                    <input type="button" value="Details" class="details">
+                    <input type="button" value="Edit" class="edit">
+                    <input type="button" value="Delete" class="delete">
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
