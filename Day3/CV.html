@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV</title>
+    <style>
+        body{
+            border-top: 10px solid black;
+            background-color: rgb(219, 216, 216);
+            padding-top: 10px;
+        }
+        .header{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .name h1{
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-style: italic;
+        }
+        .name p {
+            font-style: italic;
+        }
+        .contact button {
+            background-color: gray;
+            color: white;
+            margin-top: 20px;
+            border: none;
+            padding: 7px;
+            margin-bottom: 5px;
+        }
+        .contact .email {
+            text-decoration: underline;
+            color: red;
+        }
+        hr{
+            width: 70%;
+        }
+        .section{
+            display: flex;
+            justify-content: space-evenly;
+            margin: 2% 0;
+        }
+        .sub-title{
+            font-size: 20px;
+            font-weight: bold;
+            font-style: italic;
+        }
+        .section div:last-child{
+            width: 40%
+        }
+        .section .list-skills{
+            display: flex;
+            justify-content: center;
+        }
+
+        table, tr,td{
+            padding: 5px;
+            border-collapse: collapse;
+            border-bottom: 1px solid black;
+        }
+        table{
+            width: 90%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="name">
+                <h1>mahmoud khairy</h1>
+                <p>Backend Developer</p>
+            </div>
+            <div class="contact">
+                <button>Download PDF</button>
+                <div class="email">khairymahmoud@gmail.com</div>
+                <div>01143124020</div>
+            </div>
+        </div>
+        <hr>
+        <div class="section">
+            <div class="sub-title">profile</div>
+            <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero voluptatem perspiciatis non corrupti  asperiores dolor maxime qui facere recusandae ad.</div>
+        </div>
+        <hr>
+        <div class="section">
+            <div class="sub-title">Skills</div>
+            <div class="list-skills">
+                <div>
+                    <h3>web</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius, dolorum.</p>
+                </div>
+                <div>
+                    <h3>interface Desgin</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero, sequi!</p>
+                </div>
+                <div>
+                    <h3>project</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, molestias?</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="section">
+            <div class="sub-title">Technical</div>
+            <div>
+                <table>
+                    <tr>
+                        <td>xhtml</td>
+                        <td>jquery</td>
+                        <td>OSx</td>
+                    </tr>
+                    <tr>
+                        <td>PHP</td>
+                        <td>CSS</td>
+                        <td>Window</td>
+                    </tr>
+                    <tr>
+                        <td>Javascript</td>
+                        <td>CV</td>
+                        <td>Linux</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <hr>
+        <div class="section">
+            <div class="sub-title">Experience</div>
+                <div style="width: 20%;">
+                    <h3>Facebook</h3>
+                    <span>Senior Interface Desgin</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam nam fuga accusantium illo maiores nobis dolorum ab pariatur minus porro fugiat omnis distinctio sequi neque consectetur esse, facere velit hic!</p>
+                </div>
+                <div class="date" style="width:fit-content">
+                    2005-2007
+                </div>
+        </div>
+        <hr>
+        <div class="section">
+                <div></div>
+                <div style="width: 15%;">
+                    <h3>Twitter</h3>
+                    <span>Senior Interface Desgin</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam nam fuga accusantium illo maiores nobis dolorum ab pariatur minus porro fugiat omnis distinctio sequi neque consectetur esse, facere velit hic!</p>
+                </div>
+                <div class="date" style="width:fit-content">
+                    2008-2018
+                </div>
+        </div>
+
+
+    </div>
+</body>
+</html>
