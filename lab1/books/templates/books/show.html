@@ -1,0 +1,16 @@
+{% extends "books/layout.html" %}
+{% block title %}
+Books
+{% endblock title %}
+
+{% block content %}
+<div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{book.name}}</h5>
+      <p class="card-text">Latest Version: {{book.latest_version}}</p>
+      <p class="card-text">Publish Date: {{book.publish_date}}</p>
+      <a href="/books" class="btn btn-primary">Books</a>
+    </div>
+  </div>
+{% endblock content %}
