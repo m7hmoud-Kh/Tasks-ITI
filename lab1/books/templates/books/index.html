@@ -4,6 +4,7 @@ Books
 {% endblock title %}
 
 {% block content %}
+<a href="{% url 'store' %}" class="btn btn-primary">Add Book</a>
 <table class="table table-striped">
     <thead>
       <tr>
@@ -11,6 +12,8 @@ Books
         <th scope="col">Name</th>
         <th scope="col">publish Date</th>
         <th scope="col">Latest Version</th>
+        <th scope="col">Author Name</th>
+        <th scope="col">Image</th>
         <th scope="col">Action</th>
       </tr>
     </thead>
@@ -21,10 +24,13 @@ Books
                 <td>{{book.name}}</td>
                 <td>{{book.publish_date}}</td>
                 <td>{{book.latest_version}}</td>
+                <td> {{book.author.name}} </td>
+                <td> <img src="/media/{{book.image}}" width="150" height="150" alt=""> </td>
+
                 <td>
                     <a href="{{book.id}}/delete" class="btn btn-danger">Delete</a>
                     <a href="{{book.id}}" class="btn btn-primary">Show</a>
-
+                    <a href="{% url 'update' book.id %}" class="btn btn-success">Update</a>
                 </td>
             </tr>
         {% endfor %}

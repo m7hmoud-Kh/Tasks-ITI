@@ -1,0 +1,14 @@
+{% extends "books/layout.html" %}
+{% block title %}
+Add Book
+{% endblock title %}
+{% block content %}
+<form method="post" enctype="multipart/form-data">
+    {%csrf_token%}
+    {{form}}
+    <input type="submit" value="add">
+</form>
+<div style="color:red">
+    {{msg}}
+</div>
+{% endblock content %}
