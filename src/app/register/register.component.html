@@ -1,0 +1,85 @@
+<div class="card mb-4" id="forms">
+  <div class="card-body">
+      <form [formGroup]="userData" (ngSubmit)="handleRegisterForm()">
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label" for="name">Name</label>
+          <div class="col-sm-10">
+          <input class="form-control" id="name" type="text" placeholder="name" name="name"  formControlName="name"/>
+          @if (userData.controls['name'].errors?.['required'] && userData.controls['name'].touched) {
+            <span class="text-danger"> Name is Required</span>
+          }
+          </div>
+      </div>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label" htmlFor="Email">Email</label>
+          <div class="col-sm-10">
+          <input class="form-control" name="email" id="Email" type="email" placeholder="Email" formControlName="email">
+          @if (userData.controls['email'].touched) {
+            @if (userData.controls['email'].errors?.['required']) {
+              <span class="text-danger">Email is Required</span>
+            }
+            @if (userData.controls['email'].errors?.['email']) {
+              <span class="text-danger">Must Enter Valid Email</span>
+            }
+            @if (userData.controls['email'].errors?.['pattern']) {
+              <span class="text-danger">Invalid Pattern Email</span>
+            }
+          }
+          </div>
+        </div>
+          <div class="form-group row">
+              <label class="col-sm-2 col-form-label" htmlFor="userName">UserName</label>
+              <div class="col-sm-10">
+              <input class="form-control" id="userName" type="text" placeholder="UserName" name="userName" formControlName="username" />
+              @if (userData.controls['username'].touched) {
+                @if (userData.controls['username'].errors?.['noSpace']) {
+                <span class="text-danger">User name must not contain space</span>
+                }
+              }
+              </div>
+          </div>
+          <div class="form-group row">
+              <label class="col-sm-2 col-form-label" htmlFor="Password">Password</label>
+              <div class="col-sm-10">
+              <input class="form-control" id="Password" type="password" placeholder="Password" name="password" formControlName="password" />
+              </div>
+
+          </div>
+          @if (userData.controls['password'].touched) {
+            @if (userData.controls['password'].errors?.['minlength']) {
+            <p class="text-danger ">Password msut be more than 7 char</p>
+
+            }
+            @if (userData.controls['password'].errors?.['pattern']) {
+              <p class="text-danger">Password msut contains at least</p>
+              <ul class="text-danger">
+                <li> one lowercase </li>
+                <li> one uppercase</li>
+                <li>one digit</li>
+                <li> special character</li>
+              </ul>
+              }
+          }
+          <div class="form-group row">
+              <label class="col-sm-2 col-form-label" htmlFor="re-password">Re-Password</label>
+              <div class="col-sm-10">
+              <input class="form-control" id="re-password" type="password" placeholder="Password" name="rePassword" formControlName="rePassword"/>
+              @if (userData.controls['rePassword'].touched) {
+                @if (userData.controls['rePassword'].errors?.['notMatch']) {
+                <p class="text-danger ">Repassword Doesn't match</p>
+                }
+              }
+              </div>
+          </div>
+          <div class="form-group row">
+              <div class="col-sm-10">
+              <button class="btn btn-primary" type="submit" >Sign Up</button>
+              <span class="text-danger">  </span>
+              </div>
+          </div>
+          <a [routerLink]="['/login']">
+              have Already account Login now
+          </a>
+      </form>
+  </div>
+</div>
